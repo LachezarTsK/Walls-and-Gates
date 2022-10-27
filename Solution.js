@@ -10,7 +10,7 @@ var wallsAndGates = function (rooms) {
     this.moves = [[-1, 0], [1, 0], [0, -1], [0, 1]];
     this.rows = rooms.length;
     this.columns = rooms[0].length;
-    findDistanceFromEmptyPointToNearestGate(rooms);
+    findDistanceFromEachEmptyPointToNearestGate(rooms);
 };
 
 /**
@@ -26,7 +26,7 @@ function Point(row, column) {
  * @param {number[][]} rooms
  * @return {void} 
  */
-function findDistanceFromEmptyPointToNearestGate(rooms) {
+function findDistanceFromEachEmptyPointToNearestGate(rooms) {
     const queue = new Queue();//Queue<Point>
     initializeQueue(rooms, queue);
 
