@@ -16,10 +16,10 @@ public class Solution {
     public void wallsAndGates(int[][] rooms) {
         rows = rooms.length;
         columns = rooms[0].length;
-        findDistanceFromEmptyPointToNearestGate(rooms);
+        findDistanceFromEachEmptyPointToNearestGate(rooms);
     }
 
-    private void findDistanceFromEmptyPointToNearestGate(int[][] rooms) {
+    private void findDistanceFromEachEmptyPointToNearestGate(int[][] rooms) {
         Queue<Point> queue = new LinkedList<>();
         initializeQueue(rooms, queue);
 
